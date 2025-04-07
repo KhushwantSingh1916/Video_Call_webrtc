@@ -1,15 +1,4 @@
-// Create Call Page script
-
-// Firebase Configuration
-const firebaseConfig = {
-    apiKey: "AIzaSyBAPOukAuY-80w96gfrg82lNq27Z98vU9Q",
-    authDomain: "videocall-webrtc-68d25.firebaseapp.com",
-    projectId: "videocall-webrtc-68d25",
-    storageBucket: "videocall-webrtc-68d25.firebasestorage.app",
-    messagingSenderId: "801001516648",
-    appId: "1:801001516648:web:e39284bda73350f86115dd",
-    measurementId: "G-TK1HL6WDMZ"
-  };
+import firebaseConfig from "./config.js";
   
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
