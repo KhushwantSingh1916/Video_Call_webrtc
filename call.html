@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Active Call - Video Call App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="call-page">
+  <div id="status" class="status">Connecting...</div>
+  
+  <div class="call-container">
+    <div class="video-grid">
+      <div class="video-wrapper remote-video">
+        <video id="remoteVideo" autoplay playsinline></video>
+        <div class="name-tag">Remote User</div>
+      </div>
+      
+      <div class="video-wrapper local-video">
+        <video id="localVideo" autoplay muted playsinline></video>
+        <div class="name-tag">You</div>
+      </div>
+    </div>
+    
+    <div class="call-controls">
+      <button id="toggleVideoBtn" class="btn-circle">📹</button>
+      <button id="toggleAudioBtn" class="btn-circle">🎤</button>
+      <button id="shareScreenBtn" class="btn-circle">🖥️</button>
+      <button id="recordBtn" class="btn-circle">⏺️</button>
+      <button id="hangupBtn" class="btn-circle danger">❌</button>
+    </div>
+    
+    <div class="call-info-panel">
+      <div class="call-id-small">
+        <span>Call ID: </span>
+        <input type="text" id="callIdDisplay" readonly>
+        <button id="copyCallIdBtn" class="btn-small">Copy</button>
+      </div>
+      <div class="call-timer">00:00:00</div>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+  <script src="call.js"></script>
+</body>
+</html>

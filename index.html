@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Video Call App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Video Call App</h1>
+    </div>
+    
+    <div class="home-options">
+      <div class="option-card">
+        <h2>Start a New Call</h2>
+        <p>Create a new video call and share the ID with others to join.</p>
+        <button id="createCallBtn" class="btn btn-primary">Create Call</button>
+      </div>
+      
+      <div class="option-card">
+        <h2>Join Existing Call</h2>
+        <p>Enter a call ID to join an existing video call session.</p>
+        <button id="joinCallBtn" class="btn btn-secondary">Join Call</button>
+      </div>
+    </div>
+    
+    <div id="joinModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Join a Call</h2>
+        <p>Enter the Call ID shared with you</p>
+        <input type="text" id="joinInput" placeholder="Enter Call ID" class="modal-input">
+        <button id="confirmJoinBtn" class="btn btn-primary">Join</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="home.js"></script>
+</body>
+</html>

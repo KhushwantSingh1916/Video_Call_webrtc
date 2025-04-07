@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Call - Video Call App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Create a New Call</h1>
+    </div>
+    
+    <div id="status" class="status">Initializing camera...</div>
+    
+    <div class="setup-container">
+      <div class="call-id-section">
+        <h2>Your Call ID</h2>
+        <div class="call-id-display">
+          <input type="text" id="callInput" readonly>
+          <button id="copyCallIdBtn" class="btn-icon">📋 Copy</button>
+        </div>
+        <p class="help-text">Share this ID with others so they can join your call</p>
+      </div>
+      
+      <div class="preview-section">
+        <h2>Video Preview</h2>
+        <div class="video-wrapper">
+          <video id="localVideo" autoplay muted playsinline></video>
+          <div class="name-tag">You</div>
+        </div>
+        
+        <div class="device-controls">
+          <button id="toggleVideoBtn" class="btn-control">📹 Video On</button>
+          <button id="toggleAudioBtn" class="btn-control">🎤 Audio On</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="action-buttons">
+      <button id="startCallBtn" class="btn btn-success">Start Call</button>
+      <button id="backBtn" class="btn btn-outline">Back</button>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+  <script src="create.js"></script>
+</body>
+</html>
